@@ -1,0 +1,90 @@
+/* Герой секция для страницы команды с розовой темой */
+.team-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.team-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.team-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+}
+
+.team-hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    position: relative;
+}
+
+/* Таблица участников с розовыми акцентами */
+.participants-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.participants-table th, .participants-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--primary);
+}
+
+.participants-table th {
+    background-color: var(--primary-dark);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.participants-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.participants-table tr:hover {
+    background-color: rgba(69, 3, 183, 0.05);
+}
+
+/* Адаптивность для страницы команды */
+@media (max-width: 992px) {
+    .team-hero {
+        padding: 100px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-hero h1 {
+        font-size: 36px;
+    }
+    
+    .team-hero p {
+        font-size: 18px;
+    }
+    
+    .participants-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

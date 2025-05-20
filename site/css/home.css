@@ -1,0 +1,175 @@
+/* Обновите переменные в :root для розовой темы */
+:root {
+    --primary: #5F6DEC;  /* Розовый основной */
+    --primary-dark: #3D4695;  /* Темно-розовый */
+    --secondary: #6D86E4;  /* Светло-розовый */
+    --accent: #3CD288;  /* Акцентный розовый */
+    /* Остальные переменные остаются без изменений */
+}
+
+/* Герой секция с розовым градиентом */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+}
+
+.hero p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+    position: relative;
+}
+
+/* Сетка проектов с розовыми акцентами */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 30px;
+    transition: all 0.3s;
+    border: 1px solid var(--light-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-color: var(--primary);  /* Розовая граница при наведении */
+}
+
+.project-card h3 {
+    color: var(--primary);  /* Розовый заголовок */
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.project-card .subtitle {
+    font-weight: 600;
+    color: var(--accent);  /* Розовый подзаголовок */
+    margin-bottom: 20px;
+    display: block;
+    font-size: 16px;
+}
+
+.project-card p {
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.project-card .btn {
+    align-self: flex-start;
+    padding: 10px 25px;
+    font-size: 14px;
+    background-color: #000000;  /* Розовая кнопка */
+    color:  #ffffff;
+}
+
+.project-card .btn:hover {
+    background-color:  var(--accent);  /* Темно-розовая кнопка при наведении */
+}
+
+/* Адаптивность для главной страницы (без изменений) */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+    
+    .hero p {
+        font-size: 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+   <style>
+        /* Стили для журнала проекта */
+        .project-journal {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        
+        .journal-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .journal-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #000000;
+            font-size: 32px;
+        }
+        
+        .journal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .journal-entry {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .journal-entry:hover {
+            transform: translateY(-5px);
+        }
+        
+        .journal-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
+        
+        .journal-content {
+            padding: 20px;
+        }
+        
+        .journal-date {
+            color: #5e5e5e;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .journal-description {
+            color: #555;
+            line-height: 1.6;
+        }
+       
+    </style>
